@@ -50,7 +50,7 @@
 
 
 
-\documentclass[journal,$if(fontsize)$$fontsize$,$endif$$if(lang)$$lang$,$endif$$if(papersize)$$papersize$,$endif$$for(classoption)$$classoption$$sep$,$endfor$]{IEEEtran}
+\documentclass[$if(journal)$journal$endif$$if(conference)$conference$endif$,$if(fontsize)$$fontsize$,$endif$$if(lang)$$lang$,$endif$$if(papersize)$$papersize$,$endif$$for(classoption)$$classoption$$sep$,$endfor$]{IEEEtran}
 
 %
 % If IEEEtran.cls has not been installed into the LaTeX system files,
@@ -393,21 +393,44 @@ $endif$
 % was not built to handle multiple paragraphs
 %
 
-$if(author)$
-\author{
-    $for(author)$
-        $if(author.last)$
-        and $author.name$~\IEEEmembership{$author.membership$}
-        $else$
-            $if(author.secondlast)$
+$if(journal)$
+
+    $if(author)$
+    \author{
+        $for(author)$
+            $if(author.last)$
             $author.name$~\IEEEmembership{$author.membership$}
             $else$
-            $author.name$~\IEEEmembership{$author.membership$},
+                $if(author.secondlast)$
+                $author.name$~\IEEEmembership{$author.membership$} and
+                $else$
+                $author.name$~\IEEEmembership{$author.membership$},
+                $endif$
             $endif$
-        $endif$
-    $endfor$ % <-this % stops a space
-\thanks{$thanks$}% <-this % stops a space
-}
+        $endfor$ % <-this % stops a space
+    \thanks{$thanks$}% <-this % stops a space
+    }
+    $endif$
+
+$endif$
+
+$if(conference)$
+
+    $if(author)$
+    \author{
+        $for(author)$
+            $if(author.last)$
+                \IEEEauthorblockN{$author.name$}
+                \IEEEauthorblockA{$author.affiliation$}
+            $else$
+                \IEEEauthorblockN{$author.name$}
+                \IEEEauthorblockA{$author.affiliation$}
+                \and
+            $endif$
+        $endfor$ % <-this % stops a space
+    }
+    $endif$
+
 $endif$
 
 % note the % following the last \IEEEmembership and also \thanks -
@@ -504,11 +527,15 @@ $for(include-after)$
 $include-after$
 $endfor$
 
-$for(author)$
-\begin{IEEEbiographynophoto}{$author.name$}
-$author.biography$
-\end{IEEEbiographynophoto}
-$endfor$
+$if(journal)$
+
+    $for(author)$
+    \begin{IEEEbiographynophoto}{$author.name$}
+    $author.biography$
+    \end{IEEEbiographynophoto}
+    $endfor$
+
+$endif$
 
 % You can push biographies down or up by placing
 % a \vfill before or after them. The appropriate

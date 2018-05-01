@@ -1,12 +1,10 @@
-TYPE := jrnl
-
 PAPER := paper
 BIBLIOGRAPHY := paper
 EXTENSIONS := markdown+table_captions+yaml_metadata_block+superscript+subscript+auto_identifiers+implicit_header_references
 
 OPTIONS := --pdf-engine pdflatex \
 		-r $(EXTENSIONS) \
-		--template="./templates/bare_$(TYPE).tex" \
+		--template="./templates/bare.tex" \
 		--filter pandoc-fignos \
 		--filter pandoc-eqnos \
 		--filter pandoc-tablenos \

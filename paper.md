@@ -1,8 +1,10 @@
 ---
+journal: true
 title: Demo of IEEE Pandoc Markdown
 author:
 - name: Dheepak Krishnamurthy
   membership: IEEE Member
+  last: true
 date: May 1st, 2018
 abstract: Abstract goes here.
 thanks: Thanks goes here
