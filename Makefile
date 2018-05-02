@@ -13,14 +13,14 @@ OPTIONS := --pdf-engine pdflatex \
 		--meta autoref=false \
 		--variable=biblio-files:$(BIBLIOGRAPHY)
 
-all: pdf tex
+all: tex
 
 pdf:
 	pandoc \
 		--filter pandoc-citeproc \
 		--bibliography=$(BIBLIOGRAPHY).bib \
 		--csl=./assets/ieee.csl \
-		$(OPTIONS) $(PAPER).md -o $(PAPER).pdf.pdf
+		$(OPTIONS) $(PAPER).md -o $(PAPER).pdf
 
 tex:
 	pandoc \
