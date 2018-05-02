@@ -51,6 +51,9 @@ pip install pandoc-tablenos
 
 **Windows**
 
+You need to install [`Make`](https://gist.github.com/evanwill/0207876c3243bbb6863e65ec5dc3f058) to use the `Makefile` on Windows.
+Git Bash is recommended for using `Make`.
+
 Installing Pandoc is straightforward on Windows. You can download the binary from the link above.
 You can install pandoc-citeproc using conda.
 
@@ -58,6 +61,8 @@ You can install pandoc-citeproc using conda.
 activate python3-pandoc-env
 conda install pandoc-citeproc
 ```
+
+You can install pandoc using conda as well, but you may need to modify the `Makefile`.
 
 Setup the Python environment for pandoc filters (optional but recommended)
 
@@ -71,4 +76,25 @@ pip install pandoc-eqnos
 pip install pandoc-tablenos
 ```
 
+### Generate Paper
+
+Make sure that you have MikTeX or MacTeX, and Pandoc installed correctly.
+
+```bash
+# Mac:
+source activate python3-pandoc-env
+# Windows:
+activate python3-pandoc-env
+
+make pdf
+# OR
+make tex
+```
+
+- Change `journal: true` to `conference: true` for a conference version of the paper.
+- Add packages to `package:` to add more packages to the tex file.
+
+### Contributions
+
+Please feel free to open issues to report bugs or submit pull requests to add features.
 

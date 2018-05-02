@@ -4,6 +4,14 @@ title: Demo of IEEE Pandoc Markdown
 author:
 - name: Dheepak Krishnamurthy
   membership: IEEE Member
+  affiliation: Organization
+- name: Second Author
+  membership: IEEE Member
+  affiliation: Organization
+  secondlast: true
+- name: Last Author
+  membership: IEEE Member
+  affiliation: Organization
   last: true
 date: May 1st, 2018
 abstract: Abstract goes here.
