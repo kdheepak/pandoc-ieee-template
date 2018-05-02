@@ -1,6 +1,7 @@
 PANDOCVERSION := $(shell pandoc --version | head -n 1 | cut -d ' ' -f 2 | cut -f1 -d.)
 PAPER := paper
 BIBLIOGRAPHY := paper
+
 EXTENSIONS := markdown+table_captions+yaml_metadata_block+superscript+subscript+auto_identifiers+implicit_header_references
 FILTERS := --filter pandoc-fignos \
 		--filter pandoc-eqnos \
@@ -13,7 +14,7 @@ else
 endif
 
 
-OPTIONS := $(PDFENGINE) \
+OPTIONS := -s -f markdown+smart $(PDFENGINE) \
 		-r $(EXTENSIONS) \
 		$(FILTERS) \
 		--meta link-citations=true \
@@ -22,22 +23,22 @@ OPTIONS := $(PDFENGINE) \
 		--variable=biblio-files:$(BIBLIOGRAPHY)
 
 PDFOPTIONS := $(OPTIONS) --template="./templates/bare.tex"
+HTMLOPTIONS := $(OPTIONS) -w html --template="./templates/html.template" --css="./assets/kultiad-serif.css"
+
+PANDOCCITEPROCOPTIONS := --filter pandoc-citeproc \
+		--bibliography=$(BIBLIOGRAPHY).bib \
+		--csl=./assets/ieee.csl
 
 all: tex
 
 html:
 	pandoc \
-		--filter pandoc-citeproc \
-		--bibliography=$(BIBLIOGRAPHY).bib \
-		--csl=./assets/ieee.csl \
-		$(OPTIONS) $(PAPER).md -o $(PAPER).html
+		$(HTMLOPTIONS) $(PANDOCCITEPROCOPTIONS) \
+		$(PAPER).md -o $(PAPER).html
 
 pdf:
 	pandoc \
-		$(PDFOPTIONS) \
-		--filter pandoc-citeproc \
-		--bibliography=$(BIBLIOGRAPHY).bib \
-		--csl=./assets/ieee.csl \
+		$(PDFOPTIONS) $(PANDOCCITEPROCOPTIONS) \
 		$(PAPER).md -o $(PAPER).pdf
 
 tex:
