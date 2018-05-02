@@ -1,5 +1,10 @@
 # Pandoc IEEE Journal and Conference template
 
+See the repository [here](https://github.com/kdheepak/pandoc-ieee-template) for more information.
+See [releases for examples](https://github.com/kdheepak/pandoc-ieee-template/releases) of PDF, DOCX and Word.
+See [blog post](http://blog.kdheepak.com/writing-papers-with-markdown.html) for more information regarding this.
+See [example](http://kdheepak.com/pandoc-ieee-template) for a HTML example.
+
 ### Setup
 
 - Install [MikTeX](https://miktex.org/download) or [MacTeX](http://www.tug.org/mactex/)
