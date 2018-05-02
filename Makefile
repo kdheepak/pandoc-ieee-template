@@ -33,7 +33,7 @@ PANDOCCITEPROCOPTIONS := --filter pandoc-citeproc \
 all: tex
 
 html:
-	pandoc \
+	pandoc --self-contained \
 		$(HTMLOPTIONS) $(PANDOCCITEPROCOPTIONS) \
 		$(PAPER).md -o $(PAPER).html
 
