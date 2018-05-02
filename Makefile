@@ -20,7 +20,7 @@ pdf:
 		--filter pandoc-citeproc \
 		--bibliography=$(BIBLIOGRAPHY).bib \
 		--csl=./assets/ieee.csl \
-		$(OPTIONS) $(PAPER).md -o $(PAPER).pdf
+		$(OPTIONS) $(PAPER).md -o $(PAPER).pdf.pdf
 
 tex:
 	pandoc \

@@ -60,8 +60,11 @@ Appendix one text goes here.
 
 Appendix two text goes here.
 
-Acknowledgment {#acknowledgment .unnumbered .unnumbered}
+Acknowledgment {#acknowledgment .unnumbered}
 ==============
 
 The authors would like to thank ...
+
+References {#references .unnumbered}
+==========
 

@@ -1,5 +1,5 @@
 
-%% bare_jrnl.tex
+%% bare_$if(journal)$jrnl$endif$$if(conference)$conf$endif$.tex
 %% V1.4b
 %% 2015/08/26
 %% by Michael Shell
@@ -8,7 +8,7 @@
 %%
 %% This is a skeleton file demonstrating the use of IEEEtran.cls
 %% (requires IEEEtran.cls version 1.8b or later) with an IEEE
-%% journal paper.
+%% $if(journal)$journal$endif$$if(conference)$conference$endif$ paper.
 %%
 %% Support sites:
 %% http://www.michaelshell.org/tex/ieeetran/
@@ -65,6 +65,7 @@ $endfor$
 
 \usepackage[style=ieee]{biblatex}
 \bibliography{IEEEabrv,$biblio-files$}
+\renewcommand*{\bibfont}{\footnotesize}
 
 % Some very useful LaTeX packages include:
 % (uncomment the ones you want to load)
@@ -520,8 +521,10 @@ $body$
 
 % \bibliographystyle{IEEEtran}
 % argument is your BibTeX string definitions and bibliography database(s)
-\small
+
+$if(biblatex)$
 \printbibliography
+$endif$
 
 $for(include-after)$
 $include-after$
