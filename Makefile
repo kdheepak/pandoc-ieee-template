@@ -26,3 +26,8 @@ tex:
 	pandoc \
 		--biblatex \
 		$(OPTIONS) $(PAPER).md -o $(PAPER).tex
+	pdflatex $(PAPER).tex > /dev/null 2>&1
+	biber $(BIBLIOGRAPHY) > /dev/null 2>&1
+	pdflatex $(PAPER).tex > /dev/null 2>&1
+	pdflatex $(PAPER).tex > /dev/null 2>&1
+
