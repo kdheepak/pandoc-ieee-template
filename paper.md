@@ -41,6 +41,11 @@ Subsection Heading Here
 
 Subsection text here.
 
+- Item1
+- Item2
+- Item3
+- Item4
+
 ### Subsubsection Heading Here
 
 Subsubsection text here.
