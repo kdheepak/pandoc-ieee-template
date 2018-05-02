@@ -9,7 +9,6 @@
 
 You can install both pandoc and pandoc-citeproc using the `conda` package manager.
 However, `conda` has an older version of pandoc and pandoc-citeproc.
-Some of the command line options passed to Pandoc in the Makefile might need to be changed in order to get an older version of Pandoc working.
 I've tested this with Pandoc 1.19.2.1.
 `pandoc-citeproc` is only required if you are interested in generating citations using the PDF target.
 The TeX target does not use the pandoc-citeproc, and uses biblatex instead.
@@ -62,7 +61,13 @@ activate python3-pandoc-env
 conda install pandoc-citeproc
 ```
 
-You can install pandoc using conda as well, but you may need to modify the `Makefile`.
+You can install pandoc using conda as well.
+This may be an older version of Pandoc though.
+
+```
+activate python3-pandoc-env
+conda install pandoc
+```
 
 Setup the Python environment for pandoc filters (optional but recommended)
 
