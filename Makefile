@@ -45,8 +45,6 @@ tex:
 		--biblatex \
 		$(PDFOPTIONS) \
 		$(PAPER).md -o $(PAPER).tex
-	pdflatex $(PAPER).tex > /dev/null 2>&1
-	biber $(BIBLIOGRAPHY) > /dev/null 2>&1
-	pdflatex $(PAPER).tex > /dev/null 2>&1
-	pdflatex $(PAPER).tex > /dev/null 2>&1
+	latexmk --quiet -pdf $(PAPER).tex > /dev/null 2>&1
+
 
