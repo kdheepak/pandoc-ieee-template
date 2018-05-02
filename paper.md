@@ -34,7 +34,7 @@ Introduction
 demo file is intended to serve as a "starter file" for IEEE journal
 papers produced under LaTeX using IEEEtran.cls version 1.8b and later.
 See the repository [here](https://github.com/kdheepak/pandoc-ieee-template) for more information.
-See [releases for examples](https://github.com/kdheepak/pandoc-ieee-template/releases) of PDF, DOCX and Word.
+See [releases for examples](https://github.com/kdheepak/pandoc-ieee-template/releases) of PDF, DOCX and HTML.
 See [blog post](http://blog.kdheepak.com/writing-papers-with-markdown.html) for more information regarding this.
 I wish you the best of success.
 
