@@ -77,7 +77,7 @@ Markdown bullet points
 
 Nunc eu eleifend est. Donec consequat tempor mauris. Vestibulum maximus varius hendrerit. Praesent porta dolor at est rutrum, a viverra lorem gravida. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam hendrerit dignissim dignissim. Mauris commodo nec dolor ac vestibulum. Nulla facilisi. Nulla quis ante at tortor vestibulum egestas. Praesent ac bibendum turpis. Aliquam ipsum nulla, malesuada rutrum dolor vel, volutpat volutpat mauris. Ut ultrices blandit enim, sed maximus neque pulvinar in. Donec tempus ligula a arcu semper tempor. Donec volutpat, est a bibendum scelerisque, orci dolor molestie ligula, id lobortis eros lectus nec massa. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Phasellus vel erat non velit dapibus venenatis eu placerat erat.
 
-4 types of tables are possible
+Many types of tables are possible
 
   Right     Left     Center     Default
 -------     ------ ----------   -------
@@ -87,41 +87,6 @@ Nunc eu eleifend est. Donec consequat tempor mauris. Vestibulum maximus varius h
 
 Table:  Demonstration of simple table syntax.
 
--------------------------------------------------------------
- Centered   Default           Right Left
-  Header    Aligned         Aligned Aligned
------------ ------- --------------- -------------------------
-   First    row                12.0 Example of a row that
-                                    spans multiple lines.
-
-  Second    row                 5.0 Here's another one. Note
-                                    the blank line between
-                                    rows.
--------------------------------------------------------------
-
-Table: Here's the caption. It, too, may span
-multiple lines.
-
-
-: Sample grid table.
-
-+---------------+---------------+--------------------+
-| Fruit         | Price         | Advantages         |
-+===============+===============+====================+
-| Bananas       | $1.34         | - built-in wrapper |
-|               |               | - bright color     |
-+---------------+---------------+--------------------+
-| Oranges       | $2.10         | - cures scurvy     |
-|               |               | - tasty            |
-+---------------+---------------+--------------------+
-
-| Right | Left | Default | Center |
-|------:|:-----|---------|:------:|
-|   12  |  12  |    12   |    12  |
-|  123  |  123 |   123   |   123  |
-|    1  |    1 |     1   |     1  |
-
-  : Demonstration of pipe table syntax.
 
 ## Equations
 
