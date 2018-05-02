@@ -23,7 +23,7 @@ OPTIONS := -s -f markdown+smart $(PDFENGINE) \
 		--variable=biblio-files:$(BIBLIOGRAPHY)
 
 PDFOPTIONS := $(OPTIONS) --template="./templates/bare.tex"
-HTMLOPTIONS := $(OPTIONS) -w html --template="./templates/html.template" --css="./assets/kultiad-serif.css"
+HTMLOPTIONS := $(OPTIONS) --mathjax -w html --template="./templates/html.template" --css="./assets/kultiad-serif.css"
 
 PANDOCCITEPROCOPTIONS := --filter pandoc-citeproc \
 		--bibliography=$(BIBLIOGRAPHY).bib \
