@@ -33,6 +33,9 @@ Introduction
 \IEEEPARstart{T}{his} <!-- TODO: Automate IEEEPARstart -->
 demo file is intended to serve as a "starter file" for IEEE journal
 papers produced under LaTeX using IEEEtran.cls version 1.8b and later.
+See the repository [here](https://github.com/kdheepak/pandoc-ieee-template) for more information.
+See [releases for examples](https://github.com/kdheepak/pandoc-ieee-template/releases) of PDF, DOCX and Word.
+See [blog post](http://blog.kdheepak.com/writing-papers-with-markdown.html) for more information regarding this.
 I wish you the best of success.
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris et congue tellus. Proin vehicula tincidunt volutpat. Mauris id scelerisque sem. Donec imperdiet dapibus viverra. Vestibulum aliquam dolor quis risus ornare, vitae faucibus ex porta. Sed nec blandit magna. Proin nec hendrerit magna. Curabitur a nulla varius, elementum arcu at, tristique sem. Fusce placerat mauris dui, vel lobortis risus molestie vitae. Aliquam volutpat urna sit amet posuere luctus. Curabitur pulvinar lorem vel libero aliquam, sed accumsan dolor porta. Mauris vehicula mauris nec felis dapibus ultricies.
