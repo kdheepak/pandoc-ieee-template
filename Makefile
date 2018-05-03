@@ -24,7 +24,7 @@ OPTIONS := -s -f markdown+smart $(PDFENGINE) \
 
 PDFOPTIONS := $(OPTIONS) --template="./templates/bare.tex"
 HTMLOPTIONS := $(OPTIONS) --mathjax -w html --template="./templates/html.template" --css="./assets/kultiad-serif.css"
-DOCXOPTIONS := $(OPTIONS) --mathjax --template="./templates/trans_jrnl.docx"
+DOCXOPTIONS := $(OPTIONS) --mathjax --reference-doc="./templates/trans_jrnl.docx" --template="./templates/trans_jrnl.docx"
 
 PANDOCCITEPROCOPTIONS := --filter pandoc-citeproc \
 		--bibliography=$(BIBLIOGRAPHY).bib \
